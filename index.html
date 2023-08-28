@@ -14,29 +14,35 @@
   </head>
   <body>
     <header>
-      <h1 class="capitalise font-bold text-2xl">Hunting Mobile Shop</h1>
-      <button class="btn btn-primary my-2 btn-sm" id="loadbutton">
-        Load Photos
-      </button>
-    </header>
-    <main>
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="" alt="Phone Picture" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Phone NAME</h2>
-              <p>PHONE DESCRIPTION</p>
-              <h3 class="font-bold">$99</h3>
-              <div class="card-actions">
-                <button class="btn bg-blue-600 hover:bg-blue-800 text-white">Show Details</button>
+      <div class="w-[90%] mx-auto text-center my-10 flex flex-col justify-center items-center gap-2">
+        <h1 class="capitalise font-bold text-2xl">Hunting Mobile Shop</h1>
+        <img src="logo.png" alt="" width="100px">
+        <!-- SEARCH BAR -->
+        <div class="join">
+            <div>
+              <div>
+                <input id="search-field" class="input input-bordered join-item focus:outline-none rounded-l-2xl focus:border-blue-300" placeholder="Search"/>
               </div>
             </div>
+           
+            <div class="indicator">
+              <span class="indicator-item badge badge-secondary">new</span> 
+              <button id="search-btn" class="btn join-item bg-blue-500 hover:bg-blue-600 text-white rounded-r-2xl" onclick="handleSearch()">Search</button>
+            </div>
           </div>
-      <ul id="phone-list">
-      </ul>
+
+          <!-- SEARCH BAR ENDS -->
+      </div>
+    </header>
+    <main>
+      <section class="w-[90%] mx-auto">
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 mx-auto justify-center items-center"
+        ></div>
+      </section>
     </main>
-    <footer class="bg-slate-800 py-6 text-white text-center">
+    <footer class="bg-slate-800 py-6 text-white text-center mt-10">
       <p>&copy; ABD NIMIT || 2023</p>
     </footer>
 
